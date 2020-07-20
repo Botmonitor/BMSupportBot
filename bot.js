@@ -11,6 +11,8 @@ const dbhandler = require('./src/dbhandler.js');
 const session = require('telegraf/session');
 const dateformat = require('dateformat')
 const usernamebot = '@bmonitoringbot' //ganti atau sesuaikan dengan username bot kamu
+const appName = process.env.PROJECT_NAME
+const appPort = process.env.PORT
 process.env.TZ = 'Asia/Jakarta'
 
 const dataService = require('./dataService');
@@ -396,7 +398,9 @@ bot.catch((err) => {
     console.log('Error: ', err);
   });
 
-bot.startPolling();
+bot.telegram.setWebhook(`https://${appName}.glitch.me/webhook`);
+console.log(`Bot sudah Aktif dan siap menerima pesan.`);
+bot.startWebhook('/webhook', null, appPort);
 
 /*
 If you receive Error: 409: Conflict: can't use getUpdates method while
@@ -404,6 +408,8 @@ webhook is active, comment bot.startPolling() out, remove // of the following
 commands, run your bot once and undo the changes. This will disable the
 webhook by setting it to empty.
 
+
+bot.startPolling();
 bot.telegram.setWebhook("");
 bot.startWebhook("")
 */
