@@ -1,0 +1,51 @@
+{
+  "name": "BMonitoringBot",
+  "version": "3.720.20",
+  "description": "Telegram Monitoring Bot",
+  "license": "GPL-3.0",
+  "author": "MA Nusichrome - https://t.me/MANusichrome",
+  "homepage": "https://www.bostrot.com/d/6-telegram-support-bot",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bostrot/telegram-support-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bostrot/telegram-support-bot/issues"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": ">=6.2.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^7.1.0",
+    "cron": "^1.8.2",
+    "date-diff": "^0.2.2",
+    "dateformat": "^3.0.3",
+    "debug": "^4.1.1",
+    "node-fetch": "^2.6.0",
+    "sandwich-stream": "^2.0.2",
+    "telegraf": "^3.38.0",
+    "telegraf-session-sqlite": "^1.0.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "keywords": [
+    "telegram-support-bot",
+    "support",
+    "telegraf",
+    "telegram",
+    "telegram bot api",
+    "bot",
+    "botapi",
+    "bot framework"
+  ]
+}
