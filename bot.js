@@ -11,8 +11,6 @@ const dbhandler = require('./src/dbhandler.js');
 const session = require('telegraf/session');
 const dateformat = require('dateformat')
 const usernamebot = '@bmonitoringbot' //ganti atau sesuaikan dengan username bot kamu
-const appName = process.env.PROJECT_NAME
-const appPort = process.env.PORT
 process.env.TZ = 'Asia/Jakarta'
 
 const dataService = require('./dataService');
@@ -398,9 +396,9 @@ bot.catch((err) => {
     console.log('Error: ', err);
   });
 
-bot.telegram.setWebhook(`https://${appName}.glitch.me/webhook`);
+bot.telegram.setWebhook(`https://bmsupportbot.herokuapp.com/webhook`);
 console.log(`Bot sudah Aktif dan siap menerima pesan.`);
-bot.startWebhook('/webhook', null, appPort);
+bot.startWebhook('/webhook', null, 3000);
 
 /*
 If you receive Error: 409: Conflict: can't use getUpdates method while
